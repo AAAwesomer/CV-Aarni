@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css?family=Arvo');
+.App {
+  text-align: center;
+}
+
+.App-header {
+  text-align: left;
+  background-color: #313131;
+  position: relative;
+  top: -30px;
+  color: #3DB1FC;
+  font-size: 24px;
+  font-family: Arvo;
+  line-height: 30px;
+  padding-bottom: 20px;
+}
+
+.Title {
+  margin-top: 20px;
+  font-size: 30px;
+  width: 100px;
+  padding-top: 30px;
+  padding-left: 20px;
+}
+
+.Summary {
+  font-size: 30px;
+  padding-left: 20px;
+  margin-right: 20px;
+}
+
+.Summary p{
+  text-align: left;
+}
+
+.Map {
+  background: url("http://www.clker.com/cliparts/p/D/P/J/g/0/gray-world-map.svg") no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 0px;
+  padding-top: 49%;
+  margin-top: 20px;
+}
+
+.Place {
+  background-color: red;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  padding-top: 0px;
+  cursor: pointer;
+}
+
+#Helsinki {
+  position: absolute;
+  left: 54.5%;
+  margin-top: -36.3%;
+  -webkit-transform: translate(-50%, -50%); 
+}
+
+#Berlin {
+  position: absolute;
+  left: 51%;
+  margin-top: -32.5%;
+  -webkit-transform: translate(-50%, -50%); 
+}
+
+#SV {
+  position: absolute;
+  left: 15%;
+  margin-top: -26.4%;
+  -webkit-transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.bubble 
+{
+  opacity: 0;
+  visibility: hidden; 
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  position: relative;
+  width: 80px;
+  height: 50px;
+  top: -29px;
+  left: 38px;
+  background: #fff;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  border: #000000 solid 2px;
+  z-index: 1;
+  font-family: Arvo;
+  font-size: 7px;
+}
+
+.bubble:after 
+{
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 14px 12px 14px 0;
+  border-color: transparent #fff;
+  display: block;
+  width: 0;
+  left: -12px;
+  top: 23px;
+  z-index: 2;
+}
+
+.bubble:before 
+{
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 15px 13px 15px 0;
+  border-color: transparent #000000;
+  display: block;
+  width: 0;
+  left: -15px;
+  top: 22px;
+  z-index: 1;
+}
+
+.bubble.show {
+  width: 250px;
+  height: 124px;
+  opacity: 1;
+  visibility: visible; 
+  font-size: 16px;
+}
+
+.bubbletwo 
+{
+  opacity: 0;
+  visibility: hidden; 
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  position: relative;
+  top: -28px;
+  left: -20px;
+  width: 80px;
+  height: 50px;
+  padding: 0px 10px;
+  background: #fff;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  border: #000000 solid 2px;
+  z-index: 1;
+  font-family: Arvo;
+  -webkit-transform: translate(-100%, 0%);
+  font-size: 7px;
+}
+
+.bubbletwo:after 
+{
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 14px 0 14px 12px;
+  border-color: transparent #fff;
+  display: block;
+  width: 0;
+  right: -12px;
+  top: 23px;
+  z-index: 2;
+}
+
+.bubbletwo:before 
+{
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 15px 0 15px 13px;
+  border-color: transparent #000000;
+  display: block;
+  width: 0;
+  right: -15px;
+  top: 22px;
+  z-index: 1;
+}
+
+.bubbletwo.show {
+  width: 250px;
+  height: 166px;
+  opacity: 1;
+  visibility: visible; 
+  font-size: 16px;
+}
+
+.bubblethree 
+{
+  opacity: 0;
+  visibility: hidden; 
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  position: relative;
+  top: 45px;
+  left: -39px;
+  width: 80px;
+  height: 50px;
+  padding-top: 0px;
+  background: #FFFFFF;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  border: #000000 solid 2px;
+  z-index: 1;
+  font-family: Arvo;
+  font-size: 7px;
+}
+
+.bubblethree:after 
+{
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 0 15px 15px;
+  border-color: #FFFFFF transparent;
+  display: block;
+  width: 0;
+  top: -15px;
+  left: 32px;
+  z-index: 2;
+}
+
+.bubblethree:before 
+{
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 0 16px 16px;
+  border-color: #000000 transparent;
+  display: block;
+  width: 0;
+  top: -18px;
+  left: 31px;
+  z-index: 1;
+}
+
+.bubblethree.show {
+  width: 250px;
+  height: 124px;
+  opacity: 1;
+  visibility: visible; 
+  font-size: 16px;
+}
+
+.blockTitle {
+  position: relative;
+  color: #3DB1FC;
+  font-size: 30px;
+  font-family: Arvo;
+  line-height: 30px;
+  z-index: -1;
+}
+
+.Blocks {
+  position: relative;
+}
+
+.Block {
+  position: relative;
+  width: 400px;
+  height: 390px;
+  color: white;
+  font-family: Arvo;
+  margin: 10px;
+  display: inline-block;
+  padding-top: 20px;
+  vertical-align: middle;
+}
+
+#Achievements {
+  background-color: #FF3838;
+}
+
+#Skills {
+  background-color: #3878FF;
+}
+
+#Contributions {
+  background-color: #AE2AFF;
+}
+
+ul {
+  font-size: 15px;
+  padding-right: 20px;
+  text-align: left;
+  list-style-type: none;
+}
+
+li {
+  margin-bottom: 12px;
+}
+
+.chart {
+  left: 0px;
+  top: 100px;
+  padding-left: 50%;
+  padding-bottom: 10px;
+  margin-bottom: -10px;
+}
+
+.chart text {
+  fill: white;
+}
+
+.vidFrame {
+  position: relative;
+  padding-top: 56.25%; /* 16:9 */
+  height: 0;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.vidFrame iframe {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+.contactme {
+  color: black;
+  margin-top: 110px;
+}
+
+input[type=submit] {
+  position: relative;
+  margin-top: 10px;
+  background-color: #3878FF;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: Arvo;
+  font-size: 20px;
+}
+
+input[type=submit]:hover {
+  background-color: #316AE1;
+  margin-top: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
